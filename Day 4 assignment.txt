@@ -1,0 +1,38 @@
+'''Create a table called "students" with columns "id" (integer, primary key, auto-increment),
+"name" (text), "age" (integer), and "gender" (text).
+Insert three rows of data into the "students" table.
+Retrieve all rows from the "students" table.
+Update the name of the student with id = 2 to "Janet".
+Delete the row with id = 3 from the "students" table.
+Retrieve all rows from the "students" table again to verify that the changes have been made.
+'''
+--Create a table called "students" with columns "id" (integer, primary key, auto-increment),"name" (text), "age" (integer), and "gender" (text).
+
+Create Table students(id serial primary key,
+                      name varchar(255),
+                      age int,
+                      gender varchar(255));
+
+--Insert three rows of data into the "students" table.
+
+insert into students(name,age,gender) values('Ankush',21,'Male');
+insert into students (name,age,gender) values('Niraj',16,'Male');
+insert into students (name,age,gender) values('Pooja',20,'Female');
+
+--Retrieve all rows from the "students" table.
+
+Select * From students;
+
+--Update the name of the student with id = 2 to "Janet".
+
+Update students
+Set name='Janet'
+where id=2;
+
+--Delete the row with id = 3 from the "students" table.
+
+Delete from students where id=3
+ 
+--Retrieve all rows from the "students" table again to verify that the changes have been made.
+ 
+Select * From students;
